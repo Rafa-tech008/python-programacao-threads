@@ -44,9 +44,9 @@ def sequence (nome, comand):
             time.sleep (0.05)
             if ('time' in linha.strip()):
                 partes= linha.split (' ')
-                if (len (partes) > 4):
-                    temp = (partes [4].strip ())
-                    print (f"O processo {nome} roda:", temp)
+                temp = (partes [2].strip ())
+                temp = (temp.split () [0])
+                print (f"O processo {nome} roda:", temp)
             if ('Média'in linha.strip()):
                 parte= linha.split ('Média =')
                 avg = (parte [1].strip ())
